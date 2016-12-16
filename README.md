@@ -1,4 +1,4 @@
-node-oauth20-provider
+node-oauth20-provider-libre
 ==================
 
 OAuth 2.0 provider toolkit for nodeJS with connect/express support. Supports all the four authorization flows: authorization code, implicit, client credentials, password.
@@ -75,6 +75,12 @@ var oauth2lib = require('oauth20-provider');
 var oauth2 = new oauth2lib({log: {level: 2}});
 ```
 
+You can specified if you want to check for authorization header on token request, some client libraries don't make use of this specification , libraries like [passport-oauth2](https://github.com/jaredhanson/passport-oauth2).
+```js
+var oauth2lib = require('oauth20-provider');
+var oauth2 = new oauth2lib({log: {level: 2}, checkAuthorizationHeader: false});
+```
+
 Library is compatible with express/connect servers, inject oauth2 into your server.
 ```js
 server.use(oauth2.inject());
@@ -131,10 +137,4 @@ Your authorization server is ready for work.
 
 ### License ###
 
-Copyright (c) 2013 Tim Shamilov
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Copyright (c) 2016 Carlos Castillo Oporta , please see ["LICENSE"](./LICENSE) file for more datail.
