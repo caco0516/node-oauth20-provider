@@ -1,6 +1,8 @@
 node-oauth20-provider-libre
 ==================
 
+[![Build Status](https://travis-ci.org/caco0516/node-oauth20-provider-libre.svg?branch=master)](https://travis-ci.org/caco0516/node-oauth20-provider-libre)
+
 OAuth 2.0 provider toolkit for nodeJS with connect/express support. Supports all the four authorization flows: authorization code, implicit, client credentials, password.
 
 ___One more oAuth 2.0 service provider? Yes!___
